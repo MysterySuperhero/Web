@@ -1,0 +1,1 @@
+2015/03/23 15:16:57 [error] 6642#0: *1 open() "/usr/share/nginx/html/sample.html" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET /sample.html HTTP/1.1", host: "localhost"

@@ -8,5 +8,6 @@ urlpatterns = patterns('',
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^helloworld', 'ask_nazarkov.views.helloworld'),
+    url(r'^parameters', 'ask_nazarkov.views.getparameters'),
     url(r'^', 'ask_nazarkov.views.helloworld'),
 )

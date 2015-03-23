@@ -24,6 +24,7 @@
 127.0.0.1 - - [23/Mar/2015:11:36:10 +0300] "GET /favicon.ico HTTP/1.1" 200 182 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0"
 127.0.0.1 - - [23/Mar/2015:11:36:10 +0300] "GET /favicon.ico HTTP/1.1" 200 182 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0"
 127.0.0.1 - - [23/Mar/2015:11:36:14 +0300] "GET /helloworld HTTP/1.1" 200 182 "http://localhost/" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0"
+<<<<<<< HEAD
 127.0.0.1 - - [23/Mar/2015:14:50:57 +0300] "GET / HTTP/1.1" 200 182 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0"
 127.0.0.1 - - [23/Mar/2015:14:51:04 +0300] "GET /sample.html HTTP/1.1" 200 182 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0"
 127.0.0.1 - - [23/Mar/2015:14:51:07 +0300] "GET /sample.html HTTP/1.1" 200 182 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0"
@@ -171,3 +172,7 @@
 127.0.0.1 - - [23/Mar/2015:15:41:14 +0300] "GET / HTTP/1.1" 200 182 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0"
 127.0.0.1 - - [23/Mar/2015:15:41:21 +0300] "GET /sample.html HTTP/1.1" 200 1049 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0"
 127.0.0.1 - - [23/Mar/2015:15:41:27 +0300] "GET /parameters HTTP/1.1" 200 171 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0"
+=======
+>>>>>>> 527964ab06d36863ebf37ed0cd02bd25b53eaf5e
+127.0.0.1 - - [23/Mar/2015:16:34:51 +0300] "GET / HTTP/1.1" 200 182 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0"
+127.0.0.1 - - [23/Mar/2015:16:34:53 +0300] "GET /parameters HTTP/1.1" 200 214 "-" "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:36.0) Gecko/20100101 Firefox/36.0"

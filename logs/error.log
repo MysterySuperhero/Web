@@ -1,1 +1,2 @@
 2015/03/23 15:16:57 [error] 6642#0: *1 open() "/usr/share/nginx/html/sample.html" failed (2: No such file or directory), client: 127.0.0.1, server: localhost, request: "GET /sample.html HTTP/1.1", host: "localhost"
+2015/03/23 18:44:08 [crit] 12112#0: *7 mkdir() "/home/dmitri/Django/ask/cache/4" failed (2: No such file or directory) while reading upstream, client: 127.0.0.1, server: localhost, request: "GET /search/?q=f HTTP/1.1", upstream: "http://127.0.0.1:8000/search/?q=f", host: "localhost", referrer: "http://localhost/parameters"

@@ -1,0 +1,38 @@
+
+{% extends "base.html" %}
+{% block title %}New question{% endblock %}
+
+{% block main %}
+	<div class="container-fluid" style="padding-left: 0px">
+		<div class="row-fluid">
+			<h1>New Question</h1>
+			<form class="navbar-form">
+			<div class="row-fluid"   style="margin-bottom: 10px">
+				<div class="span1">Title</div>
+				<div class="span11">
+					<div class="row-fluid">
+						<input type="text" placeholder="Type something…" style="width: 98%; margin-top: 0px">
+					</div>
+				</div>
+			</div>
+			<div class="row-fluid"  style="margin-bottom: 10px">
+				<div class="span1">Text</div>
+				<div class="span11">
+					<textarea name="" id="" rows="15" placeholder="Type something…" style="width: 98%; margin-bottom: 0px"></textarea>
+				</div>
+			</div>	
+			<div class="row-fluid"  style="margin-bottom: 10px">
+				<div class="span1">Tags</div>
+				<div class="span11">
+					<input type="text" placeholder="Type something…" style="width: 98%;  margin-top: 0px">
+				</div>
+			</div>
+			<div class="row-fluid">
+				<div class="span11 offset1">					
+		          	<a class="btn btn-primary btn-sm" href="/new_question" style="margin-top: 5px;">ASK!</a>
+		        </div>
+			</div>
+		</div>
+		</form>
+	</div>
+{% endblock %}

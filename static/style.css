@@ -1,0 +1,51 @@
+.question_box {
+	border: solid 1px black;
+	margin-bottom: 10px;
+	border-radius: 4px;
+	padding: 5px;
+}
+
+.nav_buttons {
+	margin: 10%;
+}
+
+.user_name {
+	font-size:12pt;
+	font-family:serif;
+}
+
+.question_name {
+	font-size:12pt;
+	font-family:serif;
+}
+
+.question_text {
+	font-size:10pt;
+	font-family:serif;
+}
+
+.like_box {
+	border: solid 1px black;
+	margin: 5px;
+	border-radius: 3px;
+	background-color: lightgreen;
+	padding: 2px;
+}
+
+.tag_style1 {
+	font-size:16pt;
+	font-family:serif;
+	color: lightgreen;
+}
+
+.tag_style2 {
+	font-size:19pt;
+	font-family:sans-serif;
+	color: orange;
+}
+
+.tag_style3 {
+	font-size:18pt;
+	font-family: fantasy;
+	color: red;
+}

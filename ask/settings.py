@@ -24,7 +24,7 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 TEMPLATE_DIRS = (
-    '/home/dmitri/Django/ask/templates',
+    BASE_DIR + '/templates',
 )
 
 ALLOWED_HOSTS = []

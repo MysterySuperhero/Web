@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Log in{% endblock %}
+
+{% block main %}
+
+<div class="container-fluid"  style="padding-left: 0px">
+	<div class="row-fluid">
+		<h1>Log in</h1>
+		<div class="row-fluid">
+			<div class="span3">Login</div>
+			<div class="span9">
+				<input type="text" placeholder="Your login" style="width: 50%; margin-top: 0px">
+			</div>
+		</div>
+		<div class="row-fluid">
+			<div class="span3">Password</div>
+			<div class="span9">
+				<input type="password" placeholder="Password" style="width: 50%; margin-top: 0px">
+			</div>
+		</div>
+		<div class="row-fluid">
+			<div class="span9 offset3">
+				<div class="row-fluid">
+					<button class="btn btn-primary btn-sm" type="button" style="margin-top: 0px">Log in</button>
+				</div> 	
+			</div>
+		</div>
+		<div class="row-fluid">
+			<div class="span9 offset3">
+				<div class="row-fluid" style="margin-top: 15px">
+					<a href="/register">create account</a>
+				</div> 	
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endblock %}

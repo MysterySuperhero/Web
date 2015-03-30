@@ -1,20 +1,145 @@
-dmitri@dmitri-Lenovo-IdeaPad-Z500-Touch:~/Django/ask$ ab -n 10000 http://localhost/sample.html
+S KESHIROVANIYEM
+
+dmitri@dmitri-Lenovo-IdeaPad-Z500-Touch:~/Django/ask$ ab -n 100000 http://localhost/helloworld
 This is ApacheBench, Version 2.3 <$Revision: 1528965 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/
 
 Benchmarking localhost (be patient)
-Completed 1000 requests
-Completed 2000 requests
-Completed 3000 requests
-Completed 4000 requests
-Completed 5000 requests
-Completed 6000 requests
-Completed 7000 requests
-Completed 8000 requests
-Completed 9000 requests
 Completed 10000 requests
-Finished 10000 requests
+Completed 20000 requests
+Completed 30000 requests
+Completed 40000 requests
+Completed 50000 requests
+Completed 60000 requests
+Completed 70000 requests
+Completed 80000 requests
+Completed 90000 requests
+Completed 100000 requests
+Finished 100000 requests
+
+
+Server Software:        nginx/1.4.6
+Server Hostname:        localhost
+Server Port:            80
+
+Document Path:          /helloworld
+Document Length:        200 bytes
+
+Concurrency Level:      1
+Time taken for tests:   6.392 seconds
+Complete requests:      100000
+Failed requests:        0
+Total transferred:      85900000 bytes
+HTML transferred:       54600000 bytes
+Requests per second:    15643.84 [#/sec] (mean)
+Time per request:       0.064 [ms] (mean)
+Time per request:       0.064 [ms] (mean, across all concurrent requests)
+Transfer rate:          13123.11 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       0
+Processing:     0    0   0.3      0     111
+Waiting:        0    0   0.3      0     111
+Total:          0    0   0.3      0     111
+
+Percentage of the requests served within a certain time (ms)
+  50%      0
+  66%      0
+  75%      0
+  80%      0
+  90%      0
+  95%      0
+  98%      0
+  99%      0
+ 100%    111 (longest request)
+
+
+**************************************************************************************************************************
+***************************************************************************************************
+*******************************************************************************************
+
+BEZ KESHIROVANIYA
+
+dmitri@dmitri-Lenovo-IdeaPad-Z500-Touch:~/Django/ask$ ab -n 100000 http://localhost/helloworld
+This is ApacheBench, Version 2.3 <$Revision: 1528965 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+Completed 10000 requests
+Completed 20000 requests
+Completed 30000 requests
+Completed 40000 requests
+Completed 50000 requests
+Completed 60000 requests
+Completed 70000 requests
+Completed 80000 requests
+Completed 90000 requests
+Completed 100000 requests
+Finished 100000 requests
+
+
+Server Software:        nginx/1.4.6
+Server Hostname:        localhost
+Server Port:            80
+
+Document Path:          /helloworld
+Document Length:        200 bytes
+
+Concurrency Level:      1
+Time taken for tests:   146.212 seconds
+Complete requests:      100000
+Failed requests:        0
+Total transferred:      37400000 bytes
+HTML transferred:       20000000 bytes
+Requests per second:    683.94 [#/sec] (mean)
+Time per request:       1.462 [ms] (mean)
+Time per request:       1.462 [ms] (mean, across all concurrent requests)
+Transfer rate:          249.80 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       0
+Processing:     1    1   0.4      1      73
+Waiting:        0    1   0.4      1      73
+Total:          1    1   0.4      1      73
+
+Percentage of the requests served within a certain time (ms)
+  50%      1
+  66%      1
+  75%      1
+  80%      2
+  90%      2
+  95%      2
+  98%      2
+  99%      2
+ 100%     73 (longest request)
+dmitri@dmitri-Lenovo-IdeaPad-Z500-Touch:~/Django/ask$ 
+
+
+****************************************************************************************************************************************************************************************************************
+
+OTDACHA STATIKI
+
+dmitri@dmitri-Lenovo-IdeaPad-Z500-Touch:~/Django/ask$ ab -n 100000 http://localhost/sample.html
+This is ApacheBench, Version 2.3 <$Revision: 1528965 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+Completed 10000 requests
+Completed 20000 requests
+Completed 30000 requests
+Completed 40000 requests
+Completed 50000 requests
+Completed 60000 requests
+Completed 70000 requests
+Completed 80000 requests
+Completed 90000 requests
+Completed 100000 requests
+Finished 100000 requests
 
 
 Server Software:        nginx/1.4.6
@@ -22,18 +147,18 @@ Server Hostname:        localhost
 Server Port:            80
 
 Document Path:          /sample.html
-Document Length:        2711 bytes
+Document Length:        546 bytes
 
 Concurrency Level:      1
-Time taken for tests:   0.649 seconds
-Complete requests:      10000
+Time taken for tests:   6.618 seconds
+Complete requests:      100000
 Failed requests:        0
-Total transferred:      30250000 bytes
-HTML transferred:       27110000 bytes
-Requests per second:    15400.32 [#/sec] (mean)
-Time per request:       0.065 [ms] (mean)
-Time per request:       0.065 [ms] (mean, across all concurrent requests)
-Transfer rate:          45494.12 [Kbytes/sec] received
+Total transferred:      85900000 bytes
+HTML transferred:       54600000 bytes
+Requests per second:    15109.84 [#/sec] (mean)
+Time per request:       0.066 [ms] (mean)
+Time per request:       0.066 [ms] (mean, across all concurrent requests)
+Transfer rate:          12675.15 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
@@ -53,53 +178,54 @@ Percentage of the requests served within a certain time (ms)
   99%      0
  100%      1 (longest request)
 
-**************************************************************************************************************************
-***************************************************************************************************
-*******************************************************************************************
 
-dmitri@dmitri-Lenovo-IdeaPad-Z500-Touch:~/Django/ask$ ab -n 10000 http://localhost/helloworld
+************************************************************************************************************************************************************
+
+PROKSIROVANIYE
+
+dmitri@dmitri-Lenovo-IdeaPad-Z500-Touch:~/Django/ask$ ab -n 100000 http://localhost/sampl
 This is ApacheBench, Version 2.3 <$Revision: 1528965 $>
 Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
 Licensed to The Apache Software Foundation, http://www.apache.org/
 
 Benchmarking localhost (be patient)
-Completed 1000 requests
-Completed 2000 requests
-Completed 3000 requests
-Completed 4000 requests
-Completed 5000 requests
-Completed 6000 requests
-Completed 7000 requests
-Completed 8000 requests
-Completed 9000 requests
 Completed 10000 requests
-Finished 10000 requests
+Completed 20000 requests
+Completed 30000 requests
+Completed 40000 requests
+Completed 50000 requests
+Completed 60000 requests
+Completed 70000 requests
+Completed 80000 requests
+Completed 90000 requests
+Completed 100000 requests
+Finished 100000 requests
 
 
 Server Software:        nginx/1.4.6
 Server Hostname:        localhost
 Server Port:            80
 
-Document Path:          /helloworld
+Document Path:          /sampl
 Document Length:        200 bytes
 
 Concurrency Level:      1
-Time taken for tests:   0.729 seconds
-Complete requests:      10000
+Time taken for tests:   6.666 seconds
+Complete requests:      100000
 Failed requests:        0
-Total transferred:      3740000 bytes
-HTML transferred:       2000000 bytes
-Requests per second:    13712.42 [#/sec] (mean)
-Time per request:       0.073 [ms] (mean)
-Time per request:       0.073 [ms] (mean, across all concurrent requests)
-Transfer rate:          5008.25 [Kbytes/sec] received
+Total transferred:      37400000 bytes
+HTML transferred:       20000000 bytes
+Requests per second:    15000.95 [#/sec] (mean)
+Time per request:       0.067 [ms] (mean)
+Time per request:       0.067 [ms] (mean, across all concurrent requests)
+Transfer rate:          5478.86 [Kbytes/sec] received
 
 Connection Times (ms)
               min  mean[+/-sd] median   max
 Connect:        0    0   0.0      0       0
-Processing:     0    0   0.3      0      32
-Waiting:        0    0   0.3      0      32
-Total:          0    0   0.3      0      32
+Processing:     0    0   0.0      0       1
+Waiting:        0    0   0.0      0       1
+Total:          0    0   0.0      0       1
 
 Percentage of the requests served within a certain time (ms)
   50%      0
@@ -110,5 +236,4 @@ Percentage of the requests served within a certain time (ms)
   95%      0
   98%      0
   99%      0
- 100%     32 (longest request)
-
+ 100%      1 (longest request)

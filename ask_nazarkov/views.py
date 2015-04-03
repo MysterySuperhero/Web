@@ -1,13 +1,27 @@
+# -*- coding: utf-8 -*-
+
 from django.shortcuts import render
 from django.shortcuts import render_to_response
 from django.http import HttpResponse
 from django.template.loader import get_template
+import datetime
+
 
 def base(request):
 	return render(request, 'base.html')
 
+questions = [
+
+	{'title': u'Как построить лунапарк?', 'content': u'читай тут ->', 'tags':['moon', 'howto'], 'created': datetime.datetime.now()},
+	{'title': u'Как построить Технопарк?', 'content': u'читай тут ->', 'tags':['techno', 'howto'], 'created': datetime.datetime.now()},
+	{'title': u'Как построить аквапарк?', 'content': u'читай тут ->', 'tags':['aquas', 'howto'], 'created': datetime.datetime.now()},
+]
+
 def index(request):
-	return render(request, 'index.html')
+	context = {
+		'questions': questions
+	}
+	return render(request, 'index.html', context)
 
 def new_question(request):
 	return render(request, 'new_question.html')
@@ -18,7 +32,10 @@ def register(request):
 def login(request):
 	return render(request, 'login.html')
 
-def question(request):
+def question(request):  # ,pk
+	# data = {
+	# 	'pk' = int(pk)
+	# }
 	return render(request, 'question.html')
 
 def getparameters(request):

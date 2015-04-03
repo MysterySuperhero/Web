@@ -49,3 +49,18 @@
 	font-family: fantasy;
 	color: red;
 }
+
+.footer {
+	font-size:10pt;
+	font-family:sans-serif;
+	color: black;
+	margin-bottom: 20px;
+}
+
+#error {
+	font-size:15pt;
+	font-family:sans-serif;
+	color: red;
+	margin-bottom: 20px;
+	display: none;
+}

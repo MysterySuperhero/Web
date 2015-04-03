@@ -2278,3 +2278,14 @@
 
 
 }(window.jQuery);
+
+function error(){
+  var error = document.getElementById('error');
+  if (error.style.display = "block") {
+    error.style.display = "none";
+  }
+  else {
+    error.style.display = "block";
+  }
+  }
+}

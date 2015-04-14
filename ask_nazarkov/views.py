@@ -19,6 +19,7 @@ questions = [
 
 def index(request):
 	context = {
+		# 'questions': Questions.objects.all()
 		'questions': questions
 	}
 	return render(request, 'index.html', context)

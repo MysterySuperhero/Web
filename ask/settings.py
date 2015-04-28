@@ -22,6 +22,12 @@ SECRET_KEY = 'lo*1v5ex=6ar!twq1)qo!yy7hw7-9u#pa7l$9u@2=(#dus+1ea'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+DEBUG_TOOLBAR_PATCH_SETTINGS = False
+
+INTERNAL_IPS = ('127.0.0.1')
+
+STATIC_ROOT = ("/home/dmitri/Django/ask/")
+
 TEMPLATE_DEBUG = True
 TEMPLATE_DIRS = (
     BASE_DIR + '/templates',
@@ -39,7 +45,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'ask_nazarkov'
+    'debug_toolbar',
+    'ask_nazarkov',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -49,6 +56,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
@@ -86,4 +94,4 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = '/'

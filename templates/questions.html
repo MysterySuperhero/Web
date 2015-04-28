@@ -1,0 +1,41 @@
+				<div class="question_box">
+					<div class="row-fluid">
+						<div class="span2">
+							<img src="/uploads/avc.jpg" width="70" height="70" style="margin: 10px" class="img-rounded">
+							<div class="row-fluid">
+								<div style="margin: 5px">
+									<span class="like_box"> {{ question.rating }} </span>
+									<span style="float:right;">
+									<i class="icon-thumbs-up"></i>
+									<i class="icon-thumbs-down"></i>
+									</span>
+								</div>
+							</div>
+						</div>
+					
+						<div class="span10">
+							<div class="row-fluid" style="margin: 5px; margin-left: 0px">
+								<a href="/question/?id={{ question.id }}" class="question_name">
+									{{ question.title }}
+								</a>
+							</div>
+							<div class="row-fluid">
+								<span>
+									{{ question.content | truncatechars:140 | truncatewords:50 }}
+								</span>
+							</div>
+							<hr style="margin: 5px">
+							<div class="row-fluid">
+								{{ question.date }}
+							</div>
+							<div class="row-fluid">
+								<a href="/question/?id={{ question.id }}" style="margin-right: 15px">Answers()</a>
+								Tags:
+									{% for tag in question.tags.all %} 
+										<a href="/tag/{{ tag.name|escape }}">{{ tag.name }}</a>
+									{% endfor %}								
+							</div>
+						</div>
+					</div>
+				</div>
+				<hr>

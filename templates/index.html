@@ -1,64 +1,38 @@
 {% extends "base.html" %}
-{% block title %}Main{% endblock %}
+{% block title %} Main {% endblock %}
+
+{% load questions %}
 
 {% block main %}
 
 <div class="container-fluid" style="padding-left: 0px">
 	<div class="row-fluid">
 	<div class="span12" id="maincol">
-		
-    	<h1>Questions</h1>
-    		<hr>
-			{%	for question in questions	%}
-				<div class="question_box">
-					<div class="row-fluid">
-						<div class="span2">
-							<img src="/uploads/avc.jpg" width="70" height="70" style="margin: 10px" class="img-rounded">
-							<div class="row-fluid">
-								<div style="margin: 5px">
-									<span class="like_box">111</span>
-									<span style="float:right;">
-									<i class="icon-thumbs-up"></i>
-									<i class="icon-thumbs-down"></i>
-									</span>
-								</div>
-							</div>
-						</div>
-					
-						<div class="span10">
-							<div class="row-fluid" style="margin: 5px; margin-left: 0px">
-								<a href="" class="question_name">
-									{{question.title}}
-								</a>
-							</div>
-							<div class="row-fluid">
-								<span>
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex...
-								</span>
-							</div>
-							<hr style="margin: 5px">
-							<div class="row-fluid">
-								{{question.created}}
-							</div>
-							<div class="row-fluid">
-								<a href="/question/10" style="margin-right: 15px">Answers(10)</a>
-								Tags: <a href="">{% for tag in question.tags %} {{tag}} {% endfor %}</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<hr>
-			{%	endfor	%}
-
-			<div class="pagination pagination-centered">
-    			<ul>
-    				<li><a href="#">Prev</a></li>
-    				<li><a href="#">1</a></li>
-    				<li><a href="#">2</a></li>
-    				<li><a href="#">3</a></li>
-    				<li><a href="#">4</a></li>
-    				<li><a href="#">5</a></li>
-    				<li><a href="#">Next</a></li>
+        <h1>Questions</h1>
+            <hr>
+            <div  style="margin-bottom: 5px">
+                Sort by: <a href="/?order=rating">rating</a> <a href="/?order=date">date</a>
+            </div>
+            {% for question in questions_all %}
+              {% questions question %}
+            {% endfor %}
+            <div class="pagination pagination-centered">
+                <ul>
+                    {% if questions_all.number > 2 %}
+                        <li><a href="{{url}}&page"=1>1</a></li>
+                        <li><a>...</a></li>
+                    {% endif %}
+                    {% if questions_all.has_previous %}
+                        <li><a href="{{url}}&page={{ questions_all.previous_page_number }}">{{ questions_all.previous_page_number }}</a></li>
+                    {% endif %}
+                    <li><a href="{{url}}&page={{ questions_all.number }}">{{ questions_all.number }}</a></li>
+                    {% if questions_all.has_next %}
+                        <li><a href="{{url}}&page={{ questions_all.next_page_number}} ">{{questions_all.next_page_number}}</a></li>
+                    {% endif %}
+                    {% if questions_all.number < penult_page %}
+                        <li><a>...</a></li>
+                        <li><a href="{{url}}&page={{ questions_all.paginator.num_pages }}">{{ questions_all.paginator.num_pages }}</a></li>
+                    {% endif %}
     			</ul>
     		</div>
 	</div>

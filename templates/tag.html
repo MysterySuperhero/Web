@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %} Main {% endblock %}
+
+{% load questions %}
+
+{% block main %}
+
+<div class="container-fluid" style="padding-left: 0px">
+	<div class="row-fluid">
+	<div class="span12" id="maincol">
+        <h1>Tag: {{ tag.name }}</h1>
+            <hr>
+            {% for question in questions_all %}
+              {% questions question %}
+            {% endfor %}
+            <div class="pagination pagination-centered">
+                <ul>
+                    {% if questions_all.number > 2 %}
+                        <li><a href="{{url}}?page"=1>1</a></li>
+                        <li><a>...</a></li>
+                    {% endif %}
+                    {% if questions_all.has_previous %}
+                        <li><a href="{{url}}?page={{ questions_all.previous_page_number }}">{{ questions_all.previous_page_number }}</a></li>
+                    {% endif %}
+                    <li><a href="{{url}}?page={{ questions_all.number }}">{{ questions_all.number }}</a></li>
+                    {% if questions_all.has_next %}
+                        <li><a href="{{url}}?page={{ questions_all.next_page_number}} ">{{questions_all.next_page_number}}</a></li>
+                    {% endif %}
+                    {% if questions_all.number < penult_page %}
+                        <li><a>...</a></li>
+                        <li><a href="{{url}}?page={{ questions_all.paginator.num_pages }}">{{ questions_all.paginator.num_pages }}</a></li>
+                    {% endif %}
+    			</ul>
+    		</div>
+	</div>
+	</div>
+</div>
+
+{% endblock %}
